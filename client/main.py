@@ -3,6 +3,7 @@
 #place this script in /usr/local/bin
 
 import paramiko
+import os
 
 #def ssh_command(ip, port, username, password, command='pwd; ls'):
 def userMessage(message):
