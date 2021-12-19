@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 #place this script in /usr/local/bin
 
@@ -10,7 +10,7 @@ def userMessage(message):
 
 def sshCommand(ip, port, username, password, command):
 
-    paramiko.util.log_to_file("filename.log")
+    #paramiko.util.log_to_file("filename.log")
 
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -26,5 +26,7 @@ def sshCommand(ip, port, username, password, command):
     # Close the connect
     client.close()
 
-sshCommand(ip='192.168.1.64', port=22, username='pi', password='eqmcamemcc', command="python messagingserver.py")
+sshCommand(ip='192.168.1.64', port=22, username='pi', password='eqmcamemcc', command="python3 messagingserver.py")
+
+#cd .local; cd lib; cd python3.5; cd site-packages;
 
