@@ -41,7 +41,12 @@ def sshCommand(ip, port, username, password, command):
 
 #root.mainloop()
 
-sshCommand(ip='192.168.1.64', port=22, username='pi', password='eqmcamemcc', command="python3 messagingserver.py")
+ip = input("What IP is your server? ")
+port = input("What port do you want to connect to? ")
+username = input("Machine username: ")
+password = input("Machine password: ")
+
+sshCommand(ip, port, username, password, command="python3 messagingserver.py")
 
 #python3 messagingserver.py
 #ssh = paramiko.SSHClient()
